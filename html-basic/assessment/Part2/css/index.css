@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Northwell;
+    src: url(../fonts/Northwell.ttf);
+  }
+
 body {
     font-family: "Poppins", serif;
     background-color: white;
@@ -7,16 +12,15 @@ body {
 }
 
 nav {
+    width: 80%;
     height: 100px;
-    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
-    min-width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: auto;
     background-color: white;
     padding: 0 20px;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-bottom: 10px;
     border-radius: 20px;
 /*     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
@@ -44,12 +48,25 @@ nav ul li a:hover {
     color: seagreen;
 }
 
+nav ul li .loginBt{
+    background-color: seagreen;
+    border-radius: 15px;
+    color: white;
+}
+nav ul li .loginBt:hover{
+    cursor: pointer;
+    color: seagreen;
+    background-color: white;
+    border: 1px solid seagreen;
+}
+
+
 nav ul li {
     position: relative;
     height: 40px;
 }
 
-nav ul li::after {
+nav ul .menu::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -74,15 +91,16 @@ nav ul li:hover::after {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển động cho logo */
+    transition: transform 0.3s ease;
 }
-
-.logo h1 {
-    font-size: 30px;
+.logo h1,p{
     font-weight: 500;
     color: #5c5c5c;
-    z-index: 2;
     transition: color 0.3s ease, transform 0.3s ease;
+}
+.logo h1 {
+    font-size: 50px;
+    margin-top: 5px;
 }
 
 .logo h1:hover {
@@ -116,10 +134,11 @@ nav ul li:hover::after {
 .hero h1 {
     position: relative;
     z-index: 1;
-    font-size: 70px;
+    font-size: 150px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 5px;
     font-weight: 500;
+    font-family: 'Northwell',serif;
 }
 
 .hero p {
@@ -128,9 +147,9 @@ nav ul li:hover::after {
     font-size: 30px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-top: 20px;
-
+    color: white;
 }
-.gallery {
+.contentContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,16 +157,16 @@ nav ul li:hover::after {
     flex-wrap: nowrap; 
     overflow: hidden;
 }
-.gallery img{
+.contentContainer img{
 width: 100%;
 transition: ease-in-out 0.5s;
 }
-.gallery img:hover{
+.contentContener img:hover{
     transform: scale(0.8);
     }
 
 .slide,
-.information {
+.informationContainer {
     width: 50%;
     height: 500px;
     padding: 10px;
