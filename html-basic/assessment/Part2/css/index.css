@@ -1,8 +1,14 @@
+/* -This is the CSS file for the index.html file
+---------------------------------------------------------
+-Introduction part of Hue Discovery website
+---------------------------------------------------------
+Insert font Northwell.ttf for Hero landing page */
 @font-face {
     font-family: Northwell;
     src: url(../fonts/Northwell.ttf);
-  }
+}
 
+/* Setting attributes for the body */
 body {
     font-family: "Poppins", serif;
     background-color: white;
@@ -11,6 +17,7 @@ body {
     padding: 0px;
 }
 
+/* Setting attributes for the navigation bar */
 nav {
     width: 80%;
     height: 100px;
@@ -23,14 +30,13 @@ nav {
     margin-top: 50px;
     margin-bottom: 10px;
     border-radius: 20px;
-/*     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
 }
 
 nav ul {
     height: 100%;
     list-style: none;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
     gap: 30px;
 }
@@ -41,19 +47,22 @@ nav ul li a {
     font-size: 20px;
     font-weight: 500;
     padding: 10px;
-    white-space: nowrap; 
-    transition: color 0.3s ease, transform 0.3s ease; 
+    white-space: nowrap;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
 nav ul li a:hover {
     color: seagreen;
 }
 
-nav ul li .loginBt{
+nav ul li .loginBt {
     background-color: seagreen;
     border-radius: 15px;
     color: white;
+    transition: 0.3s ease-in-out;
 }
-nav ul li .loginBt:hover{
+
+nav ul li .loginBt:hover {
     cursor: pointer;
     color: seagreen;
     background-color: white;
@@ -81,7 +90,7 @@ nav ul li:hover::after {
     width: 100%;
     left: 0;
 }
-
+/* Settings for the logo and branch name of the website */
 .logo {
     display: flex;
     justify-content: flex-start;
@@ -93,11 +102,14 @@ nav ul li:hover::after {
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
-.logo h1,p{
+
+.logo h1,
+p {
     font-weight: 500;
     color: #5c5c5c;
     transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .logo h1 {
     font-size: 50px;
     margin-top: 5px;
@@ -107,7 +119,7 @@ nav ul li:hover::after {
     color: seagreen;
     transform: scale(1.1);
 }
-
+/* Settings for the hero landing page */
 .hero {
     position: relative;
     background: url("../img/Hue-hero.jpg") no-repeat center/cover;
@@ -138,7 +150,7 @@ nav ul li:hover::after {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 5px;
     font-weight: 500;
-    font-family: 'Northwell',serif;
+    font-family: 'Northwell', serif;
 }
 
 .hero p {
@@ -149,32 +161,75 @@ nav ul li:hover::after {
     margin-top: 20px;
     color: white;
 }
-.contentContainer {
+/*---------------------------------------------------------
+ - Settings for the Main content of the website 
+ ---------------------------------------------------------*/
+ 
+ .contentContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start;
+    align-items: center; /* Center content horizontally */
     margin: auto;
-    flex-wrap: nowrap; 
-    overflow: hidden;
+    border: 1px solid #5c5c5c;
 }
-.contentContainer img{
-width: 100%;
-transition: ease-in-out 0.5s;
+.contentWrapper {
+    display: flex;
+    align-items: center;
 }
-.contentContener img:hover{
-    transform: scale(0.8);
-    }
+.contentContainer h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 20px;
+}
+.contentContainer .highLightText{
+    color: red;
+}
+.contentContainer .contentWrapper .slide img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.5s;
+}
+.contentContainer .contentWrapper figcaption {
+    color: #000000; text-align: center;
+}
 
-.slide,
-.informationContainer {
+.contentContainer .contentWrapper .slide img:hover {
+    transform: scale(0.9);
+}
+
+.contentContainer .contentWrapper .slide,
+
+.contentContainer .contentWrapper .informationContainer {
     width: 50%;
-    height: 500px;
-    padding: 10px;
+    max-width: 800px;
+    padding: 5px;
 }
 
+.contentContainer .contentWrapper .informationContainer p,h3 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+ 
+.contentContainer .contentWrapper .informationContainer h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+/* Settings footer part of the website page */
+footer {
+    background-color: seagreen;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
 
-
-
+footer p,
+h4 {
+    color: white;
+}
 
 
 
@@ -199,17 +254,23 @@ transition: ease-in-out 0.5s;
 
 @media (max-width: 700px) {
     nav ul {
-        flex-direction: column;  /* Stack items vertically */
-        align-items: flex-end;     /* Center the items horizontally */
-        gap: 5px;   
-        margin-top: 20px;            /* Adjust spacing between items */
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: flex-end;
+        /* Center the items horizontally */
+        gap: 5px;
+        margin-top: 20px;
+        /* Adjust spacing between items */
     }
 
     nav ul li a {
-        font-size: 10px; /* Optionally, adjust font size for smaller screens */
-        padding: 8px;    /* Adjust padding for a more compact look */
+        font-size: 10px;
+        /* Optionally, adjust font size for smaller screens */
+        padding: 8px;
+        /* Adjust padding for a more compact look */
     }
-    .logo h1{
+
+    .logo h1 {
         font-size: 25px;
     }
 
