@@ -1,110 +1,81 @@
-﻿namespace Rock_Paper_Scissors_Game
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Game Rock Paper Scissors");
-            int totle = 5;
-            int round = 1;
-            int a = 0,
-                b = 0;
-            while (round <= totle)
-            {
-                Console.WriteLine("Game round - " + round);
-                Console.WriteLine("1-Rock, 2-Paper, 3-scissors:");
-                Console.Write("player A(You): ");
-                string playerA = Console.ReadLine();
-                if (Convert.ToInt32(playerA) < 1 || Convert.ToInt32(playerA) > 3)
-                    Console.WriteLine("Enter again!");
-                while ((Convert.ToInt32(playerA) > 0) && (Convert.ToInt32(playerA) < 4))
-                {
-                    Random computer = new Random();
+﻿using System.Text;
 
-                    string playerB = Convert.ToString(computer.Next(1, 3));
-                    Console.WriteLine("Player B(Computer): " + playerB);
-                    if (playerA == "1" && playerB == "1")
+namespace Rock_Paper_Scissors_Game
+{
+    class Program
+    {
+        static int ReadInput()
+        {
+            while (true)
+            {
+                try
+                {
+                    int input = Convert.ToInt16(Console.ReadLine());
+                    if (input >= 1 && input <= 3)
                     {
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("Tie game");
-                        Console.WriteLine("------------------------------------------");
+                        return input;
                     }
-                    else if (playerA == "1" && playerB == "2")
-                    {
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("B(Computer) wins");
-                        b++;
-                        Console.WriteLine("------------------------------------------");
-                    }
-                    else if (playerA == "1" && playerB == "3")
-                    {
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("A(You) wins");
-                        Console.WriteLine("------------------------------------------");
-                        a++;
-                    }
-                    else if (playerA == "2" && playerB == "1")
-                    {
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("A(You) wins");
-                        Console.WriteLine("------------------------------------------");
-                        a++;
-                    }
-                    else if (playerA == "2" && playerB == "2")
-                    {
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("Tie game");
-                        Console.WriteLine("------------------------------------------");
-                    }
-                    else if (playerA == "2" && playerB == "3")
-                    {
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("B(Computer) wins");
-                        Console.WriteLine("------------------------------------------");
-                        b++;
-                    }
-                    else if (playerA == "3" && playerB == "1")
-                    {
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("B(Computer) wins");
-                        Console.WriteLine("------------------------------------------");
-                        b++;
-                    }
-                    else if (playerA == "3" && playerB == "2")
-                    {
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("A(You) wins");
-                        Console.WriteLine("------------------------------------------");
-                        a++;
-                    }
-                    else if (playerA == "3" && playerB == "3")
-                    {
-                        Console.WriteLine("------------------------------------------");
-                        Console.WriteLine("Tie game");
-                        Console.WriteLine("------------------------------------------");
-                    }
-                    round++;
-                    break;
+                    else
+                        Console.Write(
+                            "Your number is not in the range of 1 to 3. Enter a number again! "
+                        );
+                }
+                catch
+                {
+                    Console.Write("Invalid format. Enter a number: ");
                 }
             }
+        }
 
-            Console.WriteLine("---------------Final score----------------");
-            Console.WriteLine("A Player (You)     : " + a + " score");
-            Console.WriteLine("B Player (Computer): " + b + " score");
-            Console.WriteLine("------------------------------------------");
-            if (a > b)
+        static int RPS(ref int a, ref int b)
+        {
+            Random computer = new Random();
+            Console.WriteLine("Enter your choice: 1 (Rock), 2 (Paper), 3 (Scissors)");
+            int playerA = ReadInput();
+            int playerB = computer.Next(1, 4);
+            Console.WriteLine("Player B (Computer): " + playerB);
+
+            if (playerA == playerB)
             {
-                Console.WriteLine("A (You) player wins");
+                Console.WriteLine("------------------------------------------");
+                Console.WriteLine("Tie game");
+                Console.WriteLine("------------------------------------------");
+            }
+            else if (
+                (playerA == 1 && playerB == 3)
+                || (playerA == 2 && playerB == 1)
+                || (playerA == 3 && playerB == 2)
+            )
+            {
+                Console.WriteLine("------------------------------------------");
+                Console.WriteLine("A (You) wins");
+                Console.WriteLine("------------------------------------------");
+                a++;
             }
             else
             {
-                if (b > a)
+                Console.WriteLine("------------------------------------------");
+                Console.WriteLine("B (Computer) wins");
+                Console.WriteLine("------------------------------------------");
+                b++;
+            }
+
+            return 0;
+        }
+
+        static void Main()
+        {
+            int playerScore = 0,
+                computerScore = 0;
+            int round = 0;
+            while (true)
+            {
+                RPS(ref playerScore, ref computerScore);
+                round++;
+                if (round == 5)
                 {
-                    Console.WriteLine("B (Computer) player wins");
-                }
-                else
-                {
-                    Console.WriteLine("Tie game");
+                    Console.WriteLine($"Score - You: {playerScore}, Computer: {computerScore}");
+                    break;
                 }
             }
         }
