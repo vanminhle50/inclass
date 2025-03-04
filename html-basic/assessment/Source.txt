@@ -1,3 +1,54 @@
 https://localvietnam.com/travel-guide/things-to-do/hue/
 https://silkpathhotel.com/hue-imperial-city-vietnams-timeless-heritage/
 https://codepen.io/AMKohn/pen/DZYKEV
+
+
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(117, 117, 117, 0.5);
+        }
+
+        .hero h1 {
+            position: relative;
+            font-size: 100px;
+            font-weight: 500;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin-bottom: 5px;
+        }
+
+        .hero p {
+            position: relative;
+            font-size: 30px;
+            margin-top: 5px;
+            border-radius: 15px;
+            padding: 5px 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            color: white;
+            background-color: rgba(139, 139, 139, 0.603);
+        }
+
+
+        
+        .hero {
+            position: relative;
+            background: url("./Hue-hero.jpg") no-repeat center/cover;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+
+            <section class="hero">
+        <h1>HUE CITY</h1>
+        <p>The best destinations of Vietnam's central region.</p>
+    </section>
