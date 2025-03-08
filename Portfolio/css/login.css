@@ -15,6 +15,7 @@ body {
 
 .mainContainer {
     width: 100%;
+    max-width: 1800px;
     height: auto;
     padding: 100px;
     margin: auto;
@@ -43,8 +44,7 @@ body {
 }
 
 .innerContainer .imageContainer .imgLogo {
-    width: 100%;
-    height: auto;
+    max-height: 80%;
     transition: 0.5s ease-in-out;
 }
 

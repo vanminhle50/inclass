@@ -5,130 +5,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Import Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <!-- Import Font Awesome for icons -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
-    <header>
+    <!-- HEADER SECTION -->
+    <header class="header-container">
+        <!-- Website Logo -->
+        <div class="logo">
+            <h2>Hue</h2>
+            <p>Discovery</p>
+        </div>
+        <!-- Navigation Menu -->
         <nav>
+<<<<<<< HEAD
             <div class="logo">
                 <h2>Hue</h2>
                 <p>Discovery</p>
             </div>
+=======
+>>>>>>> fd0efbd (Modify assessment 2 HTML and CSS)
             <ul>
-                <li class="menu"><a href="index.html" class="current " >Homepage</a></li>
+                <li class="menu"><a href="index.html" class="current ">Homepage</a></li>
                 <li class="menu"><a href="service.html">Book Now</a></li>
                 <li class="menu"><a href="about.html">About Us</a></li>
                 <li class="menu"><a href="contact.html">Contact Us</a></li>
                 <li class="loginLi"><a class="loginBt" href="login.html">Login</a></li>
             </ul>
         </nav>
-        <section class="hero">
-            <h1>Hue city</h1>
-            <p>The best destinations of Vietnam's central region.</p>
-        </section>
     </header>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Hue city</h1>
+        <p>The best destinations of Vietnam's central region.</p>
+        <a class="book-now-btn" href="service.html" class="btn">Book Now</a>
+    </section>
+    <!-- Main Content Section -->
     <main>
-        <section class="contentContainer">
-            <h2><span class="highLightText">Hue Imperial City:</span> A Timeless Journey</h2>
-            <div class="contentWrapper">
-                <figure class="slide">
-                    <img src="./img/best-time-to-visit-hue-1536x1152.webp" alt="Hue Imperial City">
-                    <figcaption>Hue Imperial City</figcaption>
-                </figure>
-                <div class="informationContainer">
-                    <div class="imperialCityContent">
-                        <article>
-                            <h3> Hue Imperial City, Vietnam</h3>
-                            <p>Hue is a city chock-full of stories. The Kings of the Nguyen Dynasty built their feudal
-                                capital
-                                along Hue’s fertile riverbanks and atop its forested hills, but their imperial legacy is
-                                just
-                                one of many reasons to visit. <br>
-                                Hue’s refined cuisine is the stuff of legend, and its leafy streets are lined with mossy
-                                pagodas, art déco mansions, and eye-popping markets. Through the whole scene flows the
-                                Perfume
-                                River, setting a languid pace the rest of the city is happy to follow. <br>
-                                Nestled in the heart of Vietnam, <span class="highLightText">Hue Imperial City</span> is a majestic testament to the
-                                country’s
-                                rich
-                                history and culture. Designated as a <span class="highLightText">UNESCO World Heritage Site</span>, this historical gem
-                                offers
-                                visitors a glimpse into the splendours of Vietnamese tradition and craftsmanship. With
-                                its
-                                serene palaces, grand temples and intricate architecture, Hue Imperial City beckons
-                                travellers
-                                seeking an experience that nurtures the spirit. <br>
-                                As an ancient citadel, Hue Imperial City is not merely a destination. It is a journey
-                                into
-                                the
-                                past. Each step here is a step through time, where the whispers of emperors and the
-                                tales of
-                                dynasties unfold in the present. With a variety of ornate gates, gardens and tombs to
-                                explore,
-                                Hue Imperial City allows for a journey through the annals of history and an opportunity
-                                to
-                                connect with the legacy of the past. Embrace the serene and the sublime in every corner
-                                of
-                                this
-                                must-visit attraction. </p>
-                        </article>                        
+        <section class="content-container">
+            <h2 class="header-text"><span class="highlight-text">Hue Imperial City:</span> A Timeless Journey</h2>
+            <div class="content-wrapper">
+                <div class="content-tab col1">
+                    <div class="paragraph-container">
+                        <h2>Discover Hue</h2>
+                        <p> Hue is a city chock-full of stories. The Kings of the Nguyen Dynasty built their feudal
+                            capital
+                            along Hue’s fertile riverbanks and atop its forested hills, but their imperial legacy is
+                            just one
+                            of many reasons to visit.</p>
+                        <figure>
+                            <img src="./img/best-time-to-visit-hue-1536x1152.webp" alt="Hue Imperial City">
+                            <figcaption>Hue Imperial City</figcaption>
+                        </figure>
+                    </div>
+                    <div class="btn-container">
+                        <a class="read-more-btn" href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="content-tab col2">
+                    <div class="paragraph-container">
+                        <h2>Discover Hue</h2>
+                        <p> Hue is a city chock-full of stories. The Kings of the Nguyen Dynasty built their feudal
+                            capital
+                            along Hue’s fertile riverbanks and atop its forested hills, but their imperial legacy is
+                            just one
+                            of many reasons to visit.</p>
+                        <figure>
+                            <img src="./img/best-time-to-visit-hue-1536x1152.webp" alt="Hue Imperial City">
+                            <figcaption>Hue Imperial City</figcaption>
+                        </figure>
+                    </div>
+                    <div class="btn-container">
+                        <a class="read-more-btn" href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="content-tab col3">
+                    <div class="paragraph-container">
+                        <h2>Discover Hue</h2>
+                        <p> Hue is a city chock-full of stories. The Kings of the Nguyen Dynasty built their feudal
+                            capital
+                            along Hue’s fertile riverbanks and atop its forested hills, but their imperial legacy is
+                            just one
+                            of many reasons to visit.</p>
+                        <figure>
+                            <img src="./img/best-time-to-visit-hue-1536x1152.webp" alt="Hue Imperial City">
+                            <figcaption>Hue Imperial City</figcaption>
+                        </figure>
+                    </div>
+                    <div class="btn-container">
+                        <a class="read-more-btn" href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="content-tab col4">
+                    <div class="paragraph-container">
+                        <h2>Discover Hue</h2>
+                        <p> Hue is a city chock-full of stories. The Kings of the Nguyen Dynasty built their feudal
+                            capital
+                            along Hue’s fertile riverbanks and atop its forested hills, but their imperial legacy is
+                            just one
+                            of many reasons to visit.</p>
+                        <figure>
+                            <img src="./img/best-time-to-visit-hue-1536x1152.webp" alt="Hue Imperial City">
+                            <figcaption>Hue Imperial City</figcaption>
+                        </figure>
+                    </div>
+                    <div class="btn-container">
+                        <a class="read-more-btn" href="#">Read more</a>
                     </div>
                 </div>
             </div>
-            <div class="contentWrapper">
-                <figure class="slide">
-                    <img src="./img/vietnameseCulture.jpg" alt="The Heart Of Vietnamese Culture">
-                    <figcaption>The Heart Of Vietnamese Culture</figcaption>
-                </figure>
-                <div class="informationContainer">
-                    <div class="imperialCityContent">
-                        <article>
-                            <h3>The Heart Of Vietnamese Culture</h3>
-                            <p> Hue Imperial City is a walled enclosure within the citadel of the city of Hue, the seat of the Nguyen dynasty (Vietnam’s last dynasty before the conquest by France) emperors and the national capital from 1802 to 1945. Constructed in 1804 under Emperor Gia Long, this historic centre was the political and cultural heart of Vietnam. <br>
-                                
-                                The Imperial City grounds are protected by ramparts and ringed by a moat. Inside the citadel is the Imperial City, which houses the Forbidden Purple City (exclusive to the emperor and his family), palaces, temples, and other fortifications. Influenced by Feng Shui and geomantic principles, the Imperial City’s architecture integrates Vietnamese traditions with Chinese and French colonial influences. <br>
-                                
-                                After Vietnam’s monarchy ended in 1945, the Hue Imperial Citadel saw various uses and suffered significant damage during the Tet Offensive in 1968. Recognised by UNESCO as a World Heritage Site in 1993, it is celebrated for its historical importance and as an example of late feudal urban planning and architecture. <br>
-                                
-                                A cornerstone of Vietnamese culture, the Imperial City showcases exquisite craftsmanship in its construction and verdant beauty in its gardens. It also serves as a canvas for the rich art, architecture and ceremonial practices of the Nguyen Dynasty. Adorned with intricate stonework, wood carvings and royal art, the temples and palaces within the Imperial City highlight the artistic excellence of the era and provide insights into the spiritual and ceremonial life of its inhabitants. <br>
-                                Today, Hue Imperial City invites visitors worldwide to explore its historic paths, grand structures and peaceful landscapes. As a symbol of Vietnam’s cultural and historical legacy, it offers a journey back in time, allowing discerning travellers to experience the magnificence of a bygone era and the enduring spirit of the Vietnamese people.
-                                </p>
-                        </article>                        
-                    </div>
-                </div>
-            </div>
-            <h2><span class="highLightText">Hue Imperial City:</span> A Timeless Journey</h2>
-
-
-
         </section>
     </main>
+
+    <!-- FOOTER SECTION -->
     <footer>
-        <div class="footerContainer">
-            <div class="footerContent">
-                <h4>Hue Discovery</h4>
-                <p> Hue Discovery is a travel agency that provides the best services for tourists who want to explore
-                    Hue city. We offer a variety of tours and services that will make your trip to Hue unforgettable.
-                </p>
-            </div>
-            <div class="footerContent">
-                <h4> Contact Us</h4>
-                <p> Address: 123 Hung Vuong Street, Kim Long Ward, Phu Xuan Distric, Hue City, Vietnam</p>
-                <p> Phone: 0123456789</p>
-                <p> Email: info@huediscovery.com.vn
-            </div>
-            <div class="footerContent">
-                <h4> Follow Us</h4>
-                <p> <a href="https://www.facebook.com/huediscovery">Facebook</a></p>
-                <p> <a href="https://www.instagram.com/huediscovery">Instagram</a></p>
-                <p> <a href="https://www.twitter.com/huediscovery">Twitter</a></p>
-            </div>
-        </div>
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Quick Links Section -->
+                <div class="footer-tab link">
+                    <h3 class="footer-header-text"> Quick Links</h3>
+                    <p> <a class="footer-link" href="index.html">Homepage</a></p>
+                    <p> <a class="footer-link" href="service.html">Book Now</a></p>
+                    <p> <a class="footer-link" href="about.html">About Us</a></p>
+                    <p> <a class="footer-link" href="contact.html">Contact Us</a></p>
+                    <p> <a class="footer-link" href="login.html">Login</a></p>
+                </div>
+                <!-- Contact Information -->
+                <div class="footer-tab contact">
+                    <h3 class="footer-header-text"> Contact Us</h3>
+                    <p> Address: 123 Hung Vuong Street, Kim Long Ward, Phu Xuan Distric, Hue City, Vietnam</p>
+                    <p> Phone: 0123456789</p>
+                    <p> Email: info@huediscovery.com.vn
+                </div>
+                <!-- Social Media Links -->
+                <div class="footer-tab follow">
+                    <h3 class="footer-header-text"> Follow Us</h3>
+                    <div class="social-media-container">
+                        <a class="social-media footer-link" href="https://www.facebook.com/huediscovery"><i
+                                class="icon fab fa-facebook-f"></i></a>
+                        <a class="social-media footer-link" href="https://www.instagram.com/huediscovery"><i
+                                class=" icon fab fa-instagram"></i></a>
+                        <a class="social-media footer-link" href="https://www.twitter.com/huediscovery"><i
+                                class="icon fab fa-twitter"></i></a>
+                    </div>
+                </div>
     </footer>
 </body>
-
 </html>

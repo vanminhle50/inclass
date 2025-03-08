@@ -1,0 +1,375 @@
+/* -This is the CSS file for Hue Discovery website
+-This file contains the styling for the website
+---------------------------------------------------------
+-Introduction part of Hue Discovery website
+---------------------------------------------------------
+/* Importing a custom font for the hero landing page */
+@font-face {
+  font-family: Northwell;
+  src: url(../fonts/Northwell.ttf);
+}
+/* Apply box-sizing to all elements for consistent layout calculations */
+* {
+  box-sizing: border-box;
+}
+
+/* Styling the body of the webpage */
+body {
+  font-family: "Poppins", serif;
+  margin: 0 auto;
+  line-height: 28px;
+  color: #333333;
+  background-color: rgb(241, 241, 241);
+
+}
+
+
+/*---------------------------------------------------------
+ HEADER STYLES
+ ---------------------------------------------------------*/
+
+/* Header container for navigation and branding */
+.header-container {
+  height: 100px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 10px 20px;
+}
+/*---------------Navigation bar part of the header ----------------*/
+
+/* Navigation bar settings */
+nav {
+  height: 100px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* Navigation list styling */
+nav ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+/* Navigation list item styling */
+nav ul li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+/* Styling navigation links */
+nav ul li a {
+  text-decoration: none;
+  color: #5c5c5c;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+/* Navigation link hover effect */
+nav ul li a:hover {
+  background-color: white;
+  color: seagreen;
+}
+/* Styling for the current active navigation link */
+nav ul li .current {
+  font-weight: bold;
+  color: seagreen;
+  background-color: white;
+}
+/*---------------Name branch part of the header ----------------*/
+/* Login button styling */
+nav ul li .loginBt {
+  background-color: seagreen;
+  border-radius: 30px;
+  border: 1px solid seagreen;
+  color: white;
+  height: 50px;
+  margin-left: 20px;
+  transition: 0.3s ease-in-out;
+}
+/* Login button hover effect */
+nav ul li .loginBt:hover {
+  color: seagreen;
+}
+/* Name branch - Logo styling */
+.logo {
+  display: flex;
+}
+/* Logo text styling */
+.logo h2,
+p {
+  font-weight: 500;
+  color: #5c5c5c;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo h2 {
+  font-size: 50px;
+  margin: 5px;
+}
+/* Logo hover effect */
+.logo h2:hover {
+  color: seagreen;
+  transform: scale(1.1);
+}
+/*---------------Hero part of the header ----------------*/
+/* Hero section styles */
+.hero {
+  position: relative;
+  background: url("../img/Hue-hero.jpg") no-repeat center/cover;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+/* Hero section overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(117, 117, 117, 0.5);
+}
+/* Hero heading styles */
+.hero h1 {
+  position: relative;
+  font-size: 150px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-family: "Northwell", serif;
+}
+/* Hero paragraph styling */
+.hero p {
+  position: relative;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+  color: white;
+  background-color: rgba(139, 139, 139, 0.603);
+  border-radius: 15px;
+  padding: 4px 20px;
+}
+/* Hero book now button styling */
+.hero .book-now-btn{
+  z-index: 1;
+  background-color: seagreen;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid seagreen;
+  color: white;
+  box-shadow:  0px 3px 8px rgba(0, 0, 0, 0.24);
+  transition: 0.3s ease-in-out;
+}
+/* Book now button hover effect */
+.hero .book-now-btn:hover{
+  background-color: white;
+  color: seagreen;
+  border: seagreen 1px solid;
+  transform: scale(1.2);
+}
+/*---------------------------------------------------------
+ MAIN CONTENT STYLES
+ ---------------------------------------------------------*/
+ /* Main content container styling */
+.content-container {
+  margin: auto;
+  text-align: center;
+}
+/* Main content header text styling */
+.content-container .header-text{
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+/* Highlight text styling */
+.content-container .highlight-text{
+  color: red;
+}
+/* Content wrapper styling */
+.content-wrapper{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+/* Content container styling */
+.content-tab{
+  width: 23%;
+  display: table-column;
+  align-items: center;
+  overflow: hidden;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* Content image styling */
+.content-tab img{
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  transition: ease-in-out 0.5s;
+}
+/* Content tab image hover effect */
+.content-tab img:hover{
+  transform: scale(0.9);
+}
+/* Content tab figcaption styling */
+.content-tab figcaption{
+  color: #000000;
+  text-align: center;
+}
+/* Read more button container styling*/
+.content-tab .btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Read more button styling */
+.content-tab .read-more-btn{
+  background-color: seagreen;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 1px solid seagreen;
+  color: white;
+  height: 50px;
+  padding: 10px 20px;
+  transition: 0.3s ease-in-out;
+}
+/* Read more button hover effect */
+.content-tab .read-more-btn:hover{
+  background-color: white;
+  color: seagreen;
+  border: seagreen 1px solid;
+  transform: scale(1.1);
+}
+
+/*---------------------------------------------------------
+ FOOTER STYLES
+ ---------------------------------------------------------*/
+/* Footer styling */
+.footer-container {
+  margin: auto;
+  background-color: rgba(170, 170, 170, 0.212);
+  padding: 20px;
+  margin-top: 50px;
+}
+/* Footer content layout */
+.footer-container .footer-content{
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+/* Footer tab styling */
+.footer-container .footer-content .footer-tab{
+  width: 30%;
+  display: table-column;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* Footer header text styling */
+.footer-header-text{
+	font-size: 18px;
+	color: seagreen;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+/* Footer header underline */
+.footer-header-text::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+/* Footer link styles */
+.footer-link{
+  text-decoration: none;
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+/* Social media icon styles */
+.icon{
+  font-size: 30px;
+}
+/* Social media container link styles */
+.social-media-container{
+  display: flex;
+  align-items: center;
+}
+/* Social media button styles */
+.social-media{
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  background-color: seagreen;
+  border-radius: 50%;
+  border: 1px solid seagreen;
+  transition: 0.3s ease-in-out;
+
+}
+/* Social media hover effect */
+.social-media:hover {
+  color: seagreen;
+  background-color: white;
+  border: 1px solid seagreen;
+  transform: scale(1.2); 
+}
+/*---------------------------------------------------------
+ RESPONSIVE STYLES
+ ---------------------------------------------------------*/
+/* Responsive styles for small screens */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    position: static;
+    height: auto;
+    justify-content: flex-start;
+    margin: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .logo h1 {
+    font-size: 25px;
+  }
+}
