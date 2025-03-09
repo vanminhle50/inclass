@@ -8,6 +8,7 @@
   font-family: Northwell;
   src: url(../fonts/Northwell.ttf);
 }
+
 /* Apply box-sizing to all elements for consistent layout calculations */
 * {
   box-sizing: border-box;
@@ -38,6 +39,7 @@ body {
   margin: auto;
   padding: 10px 20px;
 }
+
 /*---------------Navigation bar part of the header ----------------*/
 
 /* Navigation bar settings */
@@ -48,18 +50,21 @@ nav {
   justify-content: flex-end;
   align-items: center;
 }
+
 /* Navigation list styling */
 nav ul {
   list-style: none;
   display: flex;
   height: 100%;
 }
+
 /* Navigation list item styling */
 nav ul li {
   height: 100%;
   display: flex;
   align-items: center;
 }
+
 /* Styling navigation links */
 nav ul li a {
   text-decoration: none;
@@ -73,17 +78,20 @@ nav ul li a {
   height: 100%;
   padding: 20px;
 }
+
 /* Navigation link hover effect */
 nav ul li a:hover {
   background-color: white;
   color: seagreen;
 }
+
 /* Styling for the current active navigation link */
 nav ul li .current {
   font-weight: bold;
   color: seagreen;
   background-color: white;
 }
+
 /*---------------Name branch part of the header ----------------*/
 /* Login button styling */
 nav ul li .loginBt {
@@ -95,14 +103,17 @@ nav ul li .loginBt {
   margin-left: 20px;
   transition: 0.3s ease-in-out;
 }
+
 /* Login button hover effect */
 nav ul li .loginBt:hover {
   color: seagreen;
 }
+
 /* Name branch - Logo styling */
 .logo {
   display: flex;
 }
+
 /* Logo text styling */
 .logo h2,
 p {
@@ -115,11 +126,13 @@ p {
   font-size: 50px;
   margin: 5px;
 }
+
 /* Logo hover effect */
 .logo h2:hover {
   color: seagreen;
   transform: scale(1.1);
 }
+
 /*---------------Hero part of the header ----------------*/
 /* Hero section styles */
 .hero {
@@ -133,6 +146,7 @@ p {
   text-align: center;
   color: white;
 }
+
 /* Hero section overlay */
 .hero::before {
   content: "";
@@ -143,6 +157,7 @@ p {
   height: 100%;
   background: rgba(117, 117, 117, 0.5);
 }
+
 /* Hero heading styles */
 .hero h1 {
   position: relative;
@@ -152,6 +167,7 @@ p {
   font-weight: 500;
   font-family: "Northwell", serif;
 }
+
 /* Hero paragraph styling */
 .hero p {
   position: relative;
@@ -163,8 +179,9 @@ p {
   border-radius: 15px;
   padding: 4px 20px;
 }
+
 /* Hero book now button styling */
-.hero .book-now-btn{
+.hero .book-now-btn {
   z-index: 1;
   background-color: seagreen;
   text-decoration: none;
@@ -172,79 +189,87 @@ p {
   border-radius: 40px;
   border: 1px solid seagreen;
   color: white;
-  box-shadow:  0px 3px 8px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
   transition: 0.3s ease-in-out;
 }
+
 /* Book now button hover effect */
-.hero .book-now-btn:hover{
+.hero .book-now-btn:hover {
   background-color: white;
   color: seagreen;
   border: seagreen 1px solid;
   transform: scale(1.2);
 }
+
 /*---------------------------------------------------------
  MAIN CONTENT STYLES
  ---------------------------------------------------------*/
- /* Main content container styling */
+/* Main content container styling */
 .content-container {
   margin: auto;
   text-align: center;
 }
+
 /* Main content header text styling */
-.content-container .header-text{
+.content-container .header-text {
   font-size: 30px;
   font-weight: bold;
   color: #000000;
   text-decoration: underline;
   margin-top: 20px;
 }
+
 /* Highlight text styling */
-.content-container .highlight-text{
+.content-container .highlight-text {
   color: red;
 }
+
 /* Content wrapper styling */
-.content-wrapper{
+.content-wrapper {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   padding: 10px;
 }
+
 /* Content container styling */
-.content-tab{
+.content-tab {
   width: 23%;
-  display: table-column;
-  align-items: center;
-  overflow: hidden;
   margin: auto;
   padding: 10px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 /* Content image styling */
-.content-tab img{
+.content-tab img {
   width: 100%;
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   transition: ease-in-out 0.5s;
 }
+
 /* Content tab image hover effect */
-.content-tab img:hover{
+.content-tab img:hover {
   transform: scale(0.9);
 }
+
 /* Content tab figcaption styling */
-.content-tab figcaption{
+.content-tab figcaption {
   color: #000000;
   text-align: center;
 }
+
 /* Read more button container styling*/
-.content-tab .btn-container{
+.content-tab .btn-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 /* Read more button styling */
-.content-tab .read-more-btn{
+.content-tab .read-more-btn {
   background-color: seagreen;
   text-decoration: none;
   border-radius: 30px;
@@ -254,8 +279,9 @@ p {
   padding: 10px 20px;
   transition: 0.3s ease-in-out;
 }
+
 /* Read more button hover effect */
-.content-tab .read-more-btn:hover{
+.content-tab .read-more-btn:hover {
   background-color: white;
   color: seagreen;
   border: seagreen 1px solid;
@@ -272,58 +298,65 @@ p {
   padding: 20px;
   margin-top: 50px;
 }
+
 /* Footer content layout */
-.footer-container .footer-content{
+.footer-container .footer-content {
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
+
 /* Footer tab styling */
-.footer-container .footer-content .footer-tab{
+.footer-container .footer-content .footer-tab {
   width: 30%;
-  display: table-column;
   margin: 0 auto;
   padding: 10px;
 }
+
 /* Footer header text styling */
-.footer-header-text{
-	font-size: 18px;
-	color: seagreen;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
+.footer-header-text {
+  font-size: 18px;
+  color: seagreen;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
 }
+
 /* Footer header underline */
-.footer-header-text::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #e91e63;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
+.footer-header-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
 }
+
 /* Footer link styles */
-.footer-link{
+.footer-link {
   text-decoration: none;
   color: rgb(136, 136, 136);
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 10px;
 }
+
 /* Social media icon styles */
-.icon{
+.icon {
   font-size: 30px;
 }
+
 /* Social media container link styles */
-.social-media-container{
+.social-media-container {
   display: flex;
   align-items: center;
 }
+
 /* Social media button styles */
-.social-media{
+.social-media {
   display: flex;
   color: white;
   justify-content: center;
@@ -338,17 +371,19 @@ p {
   transition: 0.3s ease-in-out;
 
 }
+
 /* Social media hover effect */
 .social-media:hover {
   color: seagreen;
   background-color: white;
   border: 1px solid seagreen;
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
+
 /*---------------------------------------------------------
  RESPONSIVE STYLES
  ---------------------------------------------------------*/
-/* Responsive styles for small screens */
+/* Responsive styles for homepage small screens */
 @media (max-width: 700px) {
   nav {
     flex-direction: column;
@@ -373,3 +408,66 @@ p {
     font-size: 25px;
   }
 }
+
+/*---------------------------------------------------------
+CONTACT US PAGE STYLING.
+ ---------------------------------------------------------*/
+.contact-form {
+  width: 40%;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  text-align: center;
+}
+/* Heading styling for contact form */
+.header-text-style{
+  color: seagreen;
+}
+/* Styling for description text */
+.paragraph-text-style{
+  color: red;
+}
+
+/* Styling for group lable and input */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+  color: seagreen;
+  font-weight: 500;
+}
+/* Styling for textarea and input elements */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #868686;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+/* Styling for Message textarea about height*/
+.form-group textarea {
+  height: 200px;
+}
+/* Styling for submit button*/
+.submit-button {
+  background-color: seagreen;
+  color: white;
+  padding: 10px 30px;
+  border: 1px solid seagreen;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 30px;
+}
+/* Hover effect for the "submit" button */
+.submit-button:hover {
+  background-color: white;
+  color: seagreen;
+}
+
