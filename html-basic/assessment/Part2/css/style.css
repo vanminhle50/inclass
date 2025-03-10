@@ -413,8 +413,44 @@ p {
 CONTACT US PAGE STYLING.
  ---------------------------------------------------------*/
 .contact-form {
-  width: 40%;
+  width: 50%;
   margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+}
+/* Heading styling for contact form */
+.header-text{
+  text-align: center;
+}
+.style3{
+  margin-top: 0px;
+  color: red;
+  font-size: 25px;
+}
+.style2{
+  margin-bottom: 10px;
+  color: seagreen;
+  font-size: 35px;
+  font-weight: bold;
+}
+.icon-message{
+  color: forestgreen;
+  font-size: 50px;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* Styling for description text */
+.paragraph-text-style{
+  color: seagreen;
+  text-align: left;
+}
+.form-container {
+  width: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -422,21 +458,11 @@ CONTACT US PAGE STYLING.
   flex-direction: column;
   padding: 10px;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: white;
   text-align: center;
 }
-/* Heading styling for contact form */
-.header-text-style{
-  color: seagreen;
-}
-/* Styling for description text */
-.paragraph-text-style{
-  color: red;
-}
-
 /* Styling for group lable and input */
 .form-group {
+  width: 100%;
   margin-bottom: 15px;
   text-align: left;
   color: seagreen;
@@ -464,10 +490,12 @@ CONTACT US PAGE STYLING.
   cursor: pointer;
   font-weight: bold;
   border-radius: 30px;
+  transition: 0.3s ease-in-out;
 }
 /* Hover effect for the "submit" button */
 .submit-button:hover {
   background-color: white;
   color: seagreen;
+  transform: scale(1.2);
 }
 
