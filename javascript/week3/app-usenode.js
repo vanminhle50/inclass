@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const data ="This is a string that we are going in to write to file";
 console.log("Writing to file");
-fs.writeFile('output.txt', data,(err)=>{
+fs.writeFile('output1.txt', data,(err)=>{
     if (err){
         console.log(err);
     }else{
@@ -11,7 +11,7 @@ fs.writeFile('output.txt', data,(err)=>{
 );
 console.log("Reading from file");
 
-fs.readFile("output.txt",(err,fileText)=>{
+fs.readFile("output1.txt",(err,fileText)=>{
     if(err){
         console.error(err);
         return;
