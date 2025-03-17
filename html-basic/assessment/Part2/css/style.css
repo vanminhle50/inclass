@@ -183,9 +183,10 @@ p {
 /* Hero book now button styling */
 .hero .book-now-btn {
   z-index: 1;
+  font-size: 20px;
   background-color: seagreen;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 20px 30px;
   border-radius: 40px;
   border: 1px solid seagreen;
   color: white;
@@ -424,28 +425,6 @@ td {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*---------------------------------------------------------
  FOOTER STYLES
  ---------------------------------------------------------*/
@@ -538,56 +517,47 @@ td {
   transform: scale(1.2);
 }
 
-/*---------------------------------------------------------
- RESPONSIVE STYLES
- ---------------------------------------------------------*/
-/* Responsive styles for homepage small screens */
-@media (max-width: 700px) {
-  nav {
-    flex-direction: column;
-    position: static;
-    height: auto;
-    justify-content: flex-start;
-    margin: auto;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 20px;
-  }
-
-  nav ul li a {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .logo h1 {
-    font-size: 25px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*---------------------------------------------------------
 CONTACT US PAGE STYLING.
  ---------------------------------------------------------*/
+ .contact-hero {
+  position: relative;
+  background: url("../img/contact-hero1.jpg") no-repeat center/cover;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+}
+/* Hero section overlay */
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(170, 170, 170, 0.5);
+}
+
 .contact-form {
+
+  position: absolute; /* Make it positionable inside the hero section */
+  top: 50%; /* Position it vertically */
+  left: 70%; /* Position it horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  width: 80%; /* Adjust the width of the form */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+
+
   width: 50%;
+  max-width: 700px;
   margin: 20px auto;
   padding: 20px;
   display: flex;
@@ -697,4 +667,271 @@ CONTACT US PAGE STYLING.
   background-color: white;
   color: seagreen;
   transform: scale(1.2);
+}
+.margin-top200{
+  margin-top: 200px ;
+}
+/*---------------------------------------------------------
+BOOKING PAGE STYLING.
+ ---------------------------------------------------------*/
+/* Hero section styles */
+
+.booknow-hero {
+  position: relative;
+  background: url("../img/hero-bk.png") no-repeat center/cover;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+}
+
+/* Hero section overlay */
+.booknow-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(117, 117, 117, 0.5);
+  z-index: 0;
+}
+.content-hero{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero heading styles */
+.content-hero h2 {
+  font-size: 150px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-family: "Northwell", serif;
+  z-index: 1;
+  line-height: 80px;
+}
+
+/* Hero paragraph styling */
+.content-hero p {
+  font-family: "Poppins", serif;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  line-height: 30px;
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgba(139, 139, 139, 0.603);
+  border-radius: 15px;
+  padding:4px 10px;
+  max-width: 80%;
+  margin: auto;
+}
+
+/* Call-to-action button styles */
+.content-hero .cta-button {
+  line-height: 100px;
+  font-family: "Poppins", serif;
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px; /* Smooths out the button edges */
+  transition: background-color 0.3s ease;
+}
+
+/* CTA button hover effect */
+.content-hero .cta-button:hover {
+  background-color: #d45d53; /* Darken on hover */
+}
+
+
+/* Booking form styles -------------------------------------------------------------------------------------------------------------------------------------*/
+
+.booknow-content-wrap{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+
+.booking-form {
+  width: 50%;
+  background-color: white;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 1rem;
+}
+
+.booking-form input, .booking-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form textarea {
+  resize: vertical;
+}
+
+.booking-form button {
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.booking-form button:hover {
+  background-color: #d45d53;
+}
+
+/* Testimonials styles */
+.testimonials {
+  background-color: #f0f0f0;
+  padding: 30px;
+  text-align: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.testimonial {
+  width: 100%;
+  background-color: white;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+
+/* ABOUT US------------------------------------------------------------- */
+/* Hero section styles */
+
+.aboutus-hero {
+  position: relative;
+  background: url("../img/aboutus-hero.jpg") no-repeat center/cover;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+}
+
+/* Hero section overlay */
+.aboutus-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(117, 117, 117, 0.5);
+  z-index: 0;
+}
+/* Hero heading styles */
+.aboutus-hero h2 {
+  font-size: 150px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-family: "Northwell", serif;
+  z-index: 1;
+  line-height: 80px;
+}
+
+/* Hero paragraph styling */
+.aboutus-hero p {
+  font-family: "Poppins", serif;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  line-height: 30px;
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgba(139, 139, 139, 0.603);
+  border-radius: 15px;
+  padding:4px 10px;
+  margin: auto;
+}
+
+
+
+/* About Us Section */
+.about-us {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  color: #5e4b3c;
+  text-align: center;
+}
+
+.about-us-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-us h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 30px;
+}
+
+.about-us p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-us ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
